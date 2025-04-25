@@ -1,0 +1,277 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    background-color: #9689df; /* Light gray background */
+    color: #333;
+    padding-top: 60px; /* Space for fixed header */
+}
+
+/* Header with background image */
+header {
+    background: url('path/to/your/blog-header-image.jpg') no-repeat center center fixed; /* Replace with your image path */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(212, 141, 141);
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header p.author-info {
+    font-style: italic;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.blog-container {
+    max-width: 960px;
+    margin: 30px auto;
+    background-color: #f7d4e0;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* To contain floated elements */
+}
+
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.section p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Example of styling for an image within the content */
+.section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Comment Section */
+.comment-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+}
+
+.comment-section h2 {
+    color: #28a745; /* Green color for comments */
+    border-bottom-color: #28a745;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc; /* Placeholder for avatar */
+    overflow: hidden;
+}
+
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.comment-content p {
+    color: #6c757d;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #e9ecef; /* Light gray background for form */
+    border-radius: 8px;
+}
+
+.comment-form h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.comment-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+#nuevos-comentarios {
+    margin-top: 20px;
+}
+
+/* Like Button */
+#like-button {
+    background-color: #dc3545; /* Red color for like button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#like-button.liked {
+    background-color: #198754; /* Green when liked */
+}
+
+#like-button:hover {
+    background-color: #c82333;
+}
+
+#like-count {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+#like-button.liked #like-count {
+    color: #198754;
+}
+
+/* Share Buttons */
+.share-buttons {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.share-buttons h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #555;
+}
+
+.share-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.share-buttons a:hover {
+    opacity: 0.8;
+}
+
+.share-buttons .facebook {
+    background-color: #1877f2;
+}
+
+.share-buttons .twitter {
+    background-color: #1da1f2;
+}
+
+.share-buttons .linkedin {
+    background-color: #0077b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 80px 10px;
+    }
+    header h1 {
+        font-size: 2.8em;
+    }
+    .blog-container {
+        padding: 30px;
+        margin: 20px;
+    }
+    .share-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .share-buttons a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
